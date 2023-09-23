@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import Nav from "./Nav";
 
 import LoadingCard from "./Loadingcard";
+import Loading from "./Loading";
 
 const ListMovies = () => {
   const [movies, setMovies] = useState([]); //use state set pertama untuk mapping data dari API
@@ -104,7 +105,7 @@ const ListMovies = () => {
         <div className="d-flex">
           <div className="row justify-content-center">
             {loading ? (
-              <LoadingCard />
+                <Loading/>
             ) : (
               movies.map((item) => {
                 return (
